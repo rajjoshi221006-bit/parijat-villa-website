@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amenities | Parijat Villa</title>
+  <meta name="description" content="Explore the amenities at Parijat Villa - garden, terrace, fully equipped kitchen, free WiFi, private parking, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .amenity-card {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid #f3f4f6;
+      transition: all 0.3s ease;
+    }
+
+    .amenity-card:hover {
+      border-color: #1e3a5f;
+      box-shadow: 0 8px 30px rgba(30, 58, 95, 0.1);
+    }
+
+    .amenity-card .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.8rem;
+      background: #dbeafe;
+    }
+
+    .amenity-card .icon.gold {
+      background: #fef3c7;
+    }
+
+    .amenity-card .icon.rose {
+      background: #ede9fe;
+    }
+
+    .amenity-card .icon.blue {
+      background: #d1fae5;
+    }
+
+    .amenity-card .icon.purple {
+      background: #ede9fe;
+    }
+
+    .amenity-card .icon.green {
+      background: #d1fae5;
+    }
+
+    .amenity-card .icon.orange {
+      background: #ffedd5;
+    }
+
+    .amenity-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .amenity-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .highlight-section {
+      background: linear-gradient(135deg, #1a365d 0%, #0f2440 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .highlight-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-section p {
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .rules-section {
+      background: #f9fafb;
+    }
+
+    .rules-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rules-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+      font-size: 1rem;
+    }
+
+    .rules-list li:last-child {
+      border-bottom: none;
+    }
+
+    .rules-list li .check {
+      color: #1e3a5f;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .highlight-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Parijat<span>Villa</span></a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="book-btn">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero fade-up">
+    <div class="container">
+      <h1>Amenities</h1>
+      <p>Everything you need for a comfortable and enjoyable stay</p>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="grid-3">
+        <div class="amenity-card">
+          <div class="icon blue">&#127946;</div>
+          <h3>Swimming Pool</h3>
+          <p>Enjoy a refreshing dip in the pool. Perfect for relaxing after a day at the beach.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon blue">&#128241;</div>
+          <h3>Free WiFi</h3>
+          <p>Stay connected with complimentary high-speed internet throughout the property.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon purple">&#128663;</div>
+          <h3>Free Parking</h3>
+          <p>Private parking available on the premises. No need to worry about your vehicle.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon orange">&#128266;</div>
+          <h3>Speaker System</h3>
+          <p>Bluetooth speaker system available for your music and entertainment needs.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon gold">&#127922;</div>
+          <h3>Indoor Games</h3>
+          <p>Fun indoor games available for guests of all ages. Great for family bonding.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon green">&#127958;</div>
+          <h3>Open Terrace</h3>
+          <p>Spacious open terrace perfect for evening gatherings, dining, and relaxing under the stars.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon rose">&#9728;&#65039;</div>
+          <h3>AC Rooms</h3>
+          <p>Air-conditioned rooms available for a comfortable stay during warm weather.</p>
+        </div>
+        <div class="amenity-card">
+          <div class="icon gold">&#127961;</div>
+          <h3>Non-AC Rooms</h3>
+          <p>Budget-friendly non-AC rooms also available with natural ventilation and fans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight-section">
+    <div class="container">
+      <h2>Perfect for Weekend Getaways</h2>
+      <p>Whether you are travelling with family, friends, or solo, Parijat Villa offers everything for a memorable beach vacation.</p>
+      <a href="contact.html" class="btn" style="background: #d97706; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block;">Check Availability</a>
+    </div>
+  </section>
+
+  <section class="section rules-section fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>House Rules</h2>
+        <p>Simple guidelines to ensure a pleasant stay for everyone</p>
+      </div>
+      <div class="rules-list">
+        <li><span class="check">&#10003;</span> Check-in: 11:00 AM &nbsp;|&nbsp; Check-out: 11:00 AM</li>
+        <li><span class="check">&#10003;</span> No smoking inside the villa</li>
+        <li><span class="check">&#10003;</span> Pets are not allowed</li>
+        <li><span class="check">&#10003;</span> Please maintain silence after 10:00 PM</li>
+        <li><span class="check">&#10003;</span> Enjoy the property and keep it clean</li>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <h3>Parijat Villa</h3>
+          <p style="font-size: 0.9rem;">A peaceful beach homestay in Nandgaon, near Murud Janjira, Maharashtra. Your perfect weekend getaway on the Konkan coast.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Contact Info</h3>
+          <a href="#">Nandgaon, Murud Janjira</a>
+          <a href="#">Maharashtra 402401</a>
+          <a href="tel:+919224763985">+91 9224763985</a>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Stay connected for updates and offers.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/theparijathome?igsh=YTZvOTdycHh6ODE0" target="_blank">&#120157;</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parijat Villa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

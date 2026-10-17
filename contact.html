@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Parijat Villa</title>
+  <meta name="description" content="Get in touch with Parijat Villa. Book your stay, ask questions, or reach out for more information about our beach homestay in Nandgaon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-info-card {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info-card .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .contact-info-card .item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-info-card .item .icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      background: #ccfbf1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-card .item .text h4 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-info-card .item .text p {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .contact-form h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #1e3a5f;
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+    }
+
+    .form-group textarea {
+      height: 130px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .faq-section {
+      background: #f9fafb;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .faq-item .question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 1rem;
+    }
+
+    .faq-item .question .toggle {
+      font-size: 1.2rem;
+      color: #1e3a5f;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .question .toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-item .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.open .answer {
+      max-height: 200px;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .contact-form {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Parijat<span>Villa</span></a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="book-btn">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero fade-up">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch to book your stay or ask us anything</p>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="grid-2" style="align-items: start;">
+        <div>
+          <div class="contact-info-card">
+            <div class="item">
+              <div class="icon">&#128100;</div>
+              <div class="text">
+                <h4>Contact Person</h4>
+                <p>Prasad Joshi</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">&#128222;</div>
+              <div class="text">
+                <h4>Phone / WhatsApp</h4>
+                <p><a href="tel:+919224763985" style="color:#1e3a5f; text-decoration:none; font-size: 1.1rem; font-weight: 600;">+91 9224763985</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">&#128205;</div>
+              <div class="text">
+                <h4>Address</h4>
+                <p>Nandgaon, Tal-Murud Janjira,<br>Dist. Raigad, Maharashtra 402401</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="icon">&#128197;</div>
+              <div class="text">
+                <h4>Check-in / Check-out</h4>
+                <p>Check-in: 11:00 AM &nbsp;|&nbsp; Check-out: 11:00 AM</p>
+              </div>
+            </div>
+          </div>
+          <div class="map-container" style="border-radius: 12px; overflow: hidden;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.483677681105!2d72.9249201!3d18.3921734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84300059cc027%3A0x4dfa26f5f7e6f3a8!2sParijat%20Villa!5e0!3m2!1sen!2sin!4v1" width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div>
+          <form class="contact-form" action="https://formspree.io/f/meebnagw" method="POST">
+            <h3>Send Us a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="">Select a subject</option>
+                <option value="booking">Booking Enquiry</option>
+                <option value="availability">Check Availability</option>
+                <option value="question">General Question</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="dates">Preferred Dates</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. Aug 15-17, 2026">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions about your stay</p>
+      </div>
+      <div style="max-width: 750px; margin: 0 auto;">
+        <div class="faq-item">
+          <div class="question">
+            What is the check-in / check-out time?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Check-in is at 11:00 AM and check-out is at 11:00 AM. Early check-in or late check-out may be available on request.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">
+            Is the villa suitable for families?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Yes! The villa is perfect for families. It has a spacious living room, a garden for kids to play, and is just a short walk from the beach.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">
+            Is parking available?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Yes, free private parking is available on the premises for all guests.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">
+            Are pets allowed?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Unfortunately, pets are not allowed at the villa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">
+            How far is the beach from the villa?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Nandgaon Beach is just 90 metres away, about a 2-minute walk from the villa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">
+            Is WiFi available?
+            <span class="toggle">+</span>
+          </div>
+          <div class="answer">Yes, complimentary high-speed WiFi is available throughout the property.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <h3>Parijat Villa</h3>
+          <p style="font-size: 0.9rem;">A peaceful beach homestay in Nandgaon, near Murud Janjira, Maharashtra. Your perfect weekend getaway on the Konkan coast.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Contact Info</h3>
+          <a href="#">Nandgaon, Murud Janjira</a>
+          <a href="#">Maharashtra 402401</a>
+          <a href="tel:+919224763985">+91 9224763985</a>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Stay connected for updates and offers.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/theparijathome?igsh=YTZvOTdycHh6ODE0" target="_blank">&#120157;</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parijat Villa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.question').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

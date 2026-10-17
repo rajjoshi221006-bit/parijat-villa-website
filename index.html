@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parijat Villa | Beach Homestay in Nandgaon</title>
+  <meta name="description" content="Parijat Villa - A peaceful beach homestay in Nandgaon, near Murud Janjira. Enjoy garden views, private parking, and a short walk to Nandgaon Beach.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: linear-gradient(135deg, #0f1f3a 0%, #081428 50%, #040a17 100%);
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .sparkle {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 6px 2px rgba(255,255,255,0.4);
+      animation: rise linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.5); opacity: 0; }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.9; }
+      100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      padding: 0 1.5rem;
+      max-width: 800px;
+    }
+
+    .hero-content .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-content h1 span {
+      color: #f59e0b;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+
+    .hero-stats .stat {
+      text-align: center;
+    }
+
+    .hero-stats .stat .number {
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-stats .stat .label {
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .features {
+      background: #f9fafb;
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background: #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .feature-icon.gold {
+      background: #fef3c7;
+    }
+
+    .feature-icon.rose {
+      background: #ede9fe;
+    }
+
+    .feature-icon.blue {
+      background: #d1fae5;
+    }
+
+    .about-section {
+      background: white;
+    }
+
+    .about-image {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-content p {
+      color: #6b7280;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .about-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .about-details li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #374151;
+      font-size: 0.95rem;
+      list-style: none;
+    }
+
+    .testimonial-section {
+      background: #f9fafb;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .testimonial-card .stars {
+      color: #d97706;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card p {
+      color: #6b7280;
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #1a365d 0%, #0f2440 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .about-image {
+        height: 250px;
+      }
+      .about-content h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Parijat<span>Villa</span></a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="book-btn">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">&#9733; Beach Homestay in Nandgaon</div>
+      <h1>Welcome to <span>Parijat Villa</span></h1>
+      <p>Your peaceful getaway just 90 metres from Nandgaon Beach. Experience the beauty of Konkan coast with garden views, serene vibes, and warm hospitality.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Book Your Stay</a>
+        <a href="gallery.html" class="btn btn-secondary">View Gallery</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="number" style="font-size:1.6rem;">90m</div>
+          <div class="label" style="font-size:0.75rem;">From Beach</div>
+        </div>
+        <div class="stat">
+          <div class="number" style="font-size:1.6rem;">3</div>
+          <div class="label" style="font-size:0.75rem;">Bedrooms</div>
+        </div>
+        <div class="stat">
+          <div class="number" style="font-size:1.6rem;">&#9733; 4.9</div>
+          <div class="label" style="font-size:0.75rem;">Guest Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Parijat Villa?</h2>
+        <p>Everything you need for a relaxing beachside vacation</p>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="padding: 2rem;">
+          <div class="feature-icon">&#127754;</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Beachfront Location</h3>
+          <p style="color: #6b7280; font-size: 0.95rem;">Just 90 metres from Nandgaon Beach. Wake up to the sound of waves and enjoy sunset walks by the shore.</p>
+        </div>
+        <div class="card" style="padding: 2rem;">
+          <div class="feature-icon gold">&#127968;</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Spacious Villa</h3>
+          <p style="color: #6b7280; font-size: 0.95rem;">A well-appointed villa with a living room, fully equipped kitchen, bedroom, terrace, and garden views.</p>
+        </div>
+        <div class="card" style="padding: 2rem;">
+          <div class="feature-icon rose">&#128247;</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Free WiFi & Parking</h3>
+          <p style="color: #6b7280; font-size: 0.95rem;">Stay connected with complimentary high-speed WiFi and enjoy free private parking during your stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-section fade-up">
+    <div class="container">
+      <div class="grid-2">
+        <div class="about-image">
+          <img src="images/hero.jpg" alt="Parijat Villa">
+        </div>
+        <div class="about-content">
+          <h2>A Home Away From Home</h2>
+          <p>Parijat Villa is a charming homestay located in the peaceful village of Nandgaon, along the beautiful Konkan coast of Maharashtra. Whether you are looking for a quiet weekend retreat or a family beach holiday, our villa offers the perfect escape.</p>
+          <p>Situated within 90 metres of Nandgaon Beach, the property features a spacious villa with a private terrace, a fully equipped kitchen, and a lush garden. We provide free private parking and WiFi for all guests.</p>
+          <ul class="about-details">
+            <li>&#9989; 90m from Nandgaon Beach</li>
+            <li>&#9989; Free Private Parking</li>
+            <li>&#9989; Garden & Terrace</li>
+
+            <li>&#9989; Free WiFi</li>
+            <li>&#9989; Peaceful Location</li>
+          </ul>
+          <a href="about.html" class="btn btn-outline" style="margin-top: 1.5rem;">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonial-section fade-up" style="position: relative;">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Guests Say</h2>
+        <p>Real experiences from our visitors</p>
+      </div>
+        <div style="max-width: 700px; margin: 0 auto; position: relative;">
+        <div style="position: relative; background: white; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); overflow: hidden;">
+          <div style="position: absolute; top: -20px; left: 30px; font-size: 6rem; color: #1a365d; opacity: 0.08; font-family: Georgia, serif; line-height: 1;">&#8220;</div>
+          <div class="testimonial-track" style="display: flex; transition: transform 0.6s ease;">
+            <div style="min-width: 100%; padding: 2.5rem 2.5rem 2rem;">
+              <div style="color: #d97706; font-size: 1.3rem; margin-bottom: 0.8rem; letter-spacing: 3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p style="color: #4b5563; font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem;">"I had a very pleasant and amazing experience at Parijat Villa. The peaceful atmosphere, beautiful nature, and calming surroundings made it truly special. The owners are very humble and polite. The bungalow is very clean and well-maintained. The beach is very close. The swimming pool is also very clean and nicely maintained."</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 1rem;">
+                <div>
+                  <div style="font-weight: 600; color: #1f2937;">Rahul Bhandare</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">&#9733; Google Review</div>
+                </div>
+                <div style="color: #d97706; font-size: 0.8rem; background: #fffbeb; padding: 0.3rem 0.8rem; border-radius: 20px;">Verified Stay</div>
+              </div>
+            </div>
+            <div style="min-width: 100%; padding: 2.5rem 2.5rem 2rem;">
+              <div style="color: #d97706; font-size: 1.3rem; margin-bottom: 0.8rem; letter-spacing: 3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p style="color: #4b5563; font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem;">"Had a great stay at Parijaat Villa! The villa is clean, spacious, and perfect for a group trip. The swimming pool was well maintained and a major highlight for us. The location is peaceful and very close to Nandgaon Beach, Kashid, and Murud Janjira Fort, making sightseeing convenient. Highly recommended for weekend trips from Mumbai!"</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 1rem;">
+                <div>
+                  <div style="font-weight: 600; color: #1f2937;">Prasanna Sawant</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">&#9733; Google Review</div>
+                </div>
+                <div style="color: #d97706; font-size: 0.8rem; background: #fffbeb; padding: 0.3rem 0.8rem; border-radius: 20px;">Verified Stay</div>
+              </div>
+            </div>
+            <div style="min-width: 100%; padding: 2.5rem 2.5rem 2rem;">
+              <div style="color: #d97706; font-size: 1.3rem; margin-bottom: 0.8rem; letter-spacing: 3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p style="color: #4b5563; font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem;">"Outstanding stay! The room was top-notch with all comforts, and the location can't be beat — super close to the beach for easy access. The owner was incredibly welcoming and attentive, making us feel right at home. The swimming pool was a highlight, perfect for relaxation after a day at the beach."</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 1rem;">
+                <div>
+                  <div style="font-weight: 600; color: #1f2937;">Omkar Naik</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">&#9733; Google Review</div>
+                </div>
+                <div style="color: #d97706; font-size: 0.8rem; background: #fffbeb; padding: 0.3rem 0.8rem; border-radius: 20px;">Verified Stay</div>
+              </div>
+            </div>
+            <div style="min-width: 100%; padding: 2.5rem 2.5rem 2rem;">
+              <div style="color: #d97706; font-size: 1.3rem; margin-bottom: 0.8rem; letter-spacing: 3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p style="color: #4b5563; font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem;">"Had a wonderful stay at Parijat Villa! The property was clean, comfortable, and well-maintained. The staff was friendly and helpful, making the experience even better. Great ambiance and a perfect place to relax. Highly recommended!"</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 1rem;">
+                <div>
+                  <div style="font-weight: 600; color: #1f2937;">Rutwik Deshmukh</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">&#9733; Google Review</div>
+                </div>
+                <div style="color: #d97706; font-size: 0.8rem; background: #fffbeb; padding: 0.3rem 0.8rem; border-radius: 20px;">Verified Stay</div>
+              </div>
+            </div>
+            <div style="min-width: 100%; padding: 2.5rem 2.5rem 2rem;">
+              <div style="color: #d97706; font-size: 1.3rem; margin-bottom: 0.8rem; letter-spacing: 3px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p style="color: #4b5563; font-size: 1rem; line-height: 1.8; margin-bottom: 1.2rem;">"This is a beautiful stay located just 2 min drive from beach. The owner is so helpful and goes to an extent to help you feel comfortable, gives amazing food suggestions and recommended us place to get tempting modaks. It has a swimming pool which is 24x7 accessible. Would recommend it to anyone coming to Nandgaon."</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 1rem;">
+                <div>
+                  <div style="font-weight: 600; color: #1f2937;">Pooja Patil</div>
+                  <div style="color: #9ca3af; font-size: 0.8rem;">&#9733; Local Guide</div>
+                </div>
+                <div style="color: #d97706; font-size: 0.8rem; background: #fffbeb; padding: 0.3rem 0.8rem; border-radius: 20px;">Verified Stay</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <span class="dot active" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #1a365d; margin: 0 4px; cursor: pointer;"></span>
+          <span class="dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #d1d5db; margin: 0 4px; cursor: pointer;"></span>
+          <span class="dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #d1d5db; margin: 0 4px; cursor: pointer;"></span>
+          <span class="dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #d1d5db; margin: 0 4px; cursor: pointer;"></span>
+          <span class="dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #d1d5db; margin: 0 4px; cursor: pointer;"></span>
+        </div>
+        <p style="text-align: center; margin-top: 1.2rem; color: #6b7280; font-size: 0.9rem;">See more reviews on <a href="https://www.google.com/maps/place/Parijat+Villa/@18.3921734,72.9249201,17z" target="_blank" style="color: #1a365d; font-weight: 600;">Google Maps &#8599;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section fade-up">
+    <div class="container">
+      <h2>Ready for a Beach Getaway?</h2>
+      <p>Book your stay at Parijat Villa and experience the best of Nandgaon.</p>
+      <a href="contact.html" class="btn" style="background: #d97706; color: white; font-weight: 600; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; display: inline-block;">Book Your Stay Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <h3>Parijat Villa</h3>
+          <p style="font-size: 0.9rem;">A peaceful beach homestay in Nandgaon, near Murud Janjira, Maharashtra. Your perfect weekend getaway on the Konkan coast.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Contact Info</h3>
+          <a href="#">Nandgaon, Murud Janjira</a>
+          <a href="#">Maharashtra 402401</a>
+          <a href="tel:+919224763985">+91 9224763985</a>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Stay connected for updates and offers.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/theparijathome?igsh=YTZvOTdycHh6ODE0" target="_blank">&#120157;</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parijat Villa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Review carousel
+    const track = document.querySelector('.testimonial-track');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    const total = dots.length;
+
+    function goToSlide(index) {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(d => d.style.background = '#d1d5db');
+      dots[index].style.background = '#1a365d';
+      current = index;
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goToSlide(i));
+    });
+
+    setInterval(() => {
+      goToSlide((current + 1) % total);
+    }, 5000);
+
+    // Rising sparkles
+    const hero = document.querySelector('.hero');
+    for (let i = 0; i < 35; i++) {
+      const s = document.createElement('div');
+      s.className = 'sparkle';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.bottom = '0';
+      const size = Math.random() * 4 + 2;
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.animationDuration = (Math.random() * 4 + 3) + 's';
+      s.style.animationDelay = (Math.random() * 5) + 's';
+      hero.appendChild(s);
+    }
+  </script>
+</body>
+</html>

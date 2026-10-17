@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location | Parijat Villa</title>
+  <meta name="description" content="Find Parijat Villa in Nandgaon near Murud Janjira. Located 90m from Nandgaon Beach, close to Kashid Beach, Murud Fort, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      display: block;
+    }
+
+    .location-info {
+      padding: 2rem;
+    }
+
+    .location-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .location-info p {
+      color: #6b7280;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .location-info .address-box {
+      background: #f9fafb;
+      padding: 1.2rem;
+      border-radius: 8px;
+      border-left: 4px solid #1e3a5f;
+      margin: 1.5rem 0;
+    }
+
+    .location-info .address-box strong {
+      color: #1f2937;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .location-info .address-box span {
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+
+    .nearby-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      border: 1px solid #f3f4f6;
+      transition: all 0.3s ease;
+    }
+
+    .nearby-card:hover {
+      border-color: #1e3a5f;
+      transform: translateY(-3px);
+    }
+
+    .nearby-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nearby-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .nearby-card .distance {
+      color: #1e3a5f;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nearby-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .direction-section {
+      background: #f9fafb;
+    }
+
+    .direction-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+
+    .direction-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .direction-card p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .map-container iframe {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Parijat<span>Villa</span></a>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="book-btn">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-hero fade-up">
+    <div class="container">
+      <h1>Location</h1>
+      <p>Find us in the heart of Nandgaon, close to the best of Konkan</p>
+    </div>
+  </section>
+
+  <section class="section fade-up">
+    <div class="container">
+      <div class="grid-2" style="align-items: center;">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.483677681105!2d72.9249201!3d18.3921734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be84300059cc027%3A0x4dfa26f5f7e6f3a8!2sParijat%20Villa!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="location-info">
+          <h3>Get Directions</h3>
+          <p>Parijat Villa is located in the quiet and beautiful village of Nandgaon, along the Konkan coast of Maharashtra. The property is just a short walk from the beach, making it an ideal destination for beach lovers.</p>
+          <div class="address-box">
+            <strong>Parijat Villa</strong>
+            <span>Nandgaon, Tal-Murud Janjira,<br>Dist. Raigad, Maharashtra 402401</span>
+          </div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Parijat+Villa%2C+Nandgaon%2C+Maharashtra" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up" style="background: #f9fafb;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sightseeing & Attractions</h2>
+        <p>Explore the best of what the Konkan coast has to offer</p>
+      </div>
+      <div class="grid-3">
+        <div class="nearby-card">
+          <div class="icon">&#127754;</div>
+          <h4>Nandgaon Beach</h4>
+          <div class="distance">&#128205; 90 metres (2 min walk)</div>
+          <p>A beautiful, less-crowded beach perfect for morning walks, swimming, and relaxing by the Arabian Sea.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127754;</div>
+          <h4>Kashid Beach</h4>
+          <div class="distance">&#128205; 6.8 km (11 min drive)</div>
+          <p>One of the most popular beaches on the Konkan coast, known for its white sand, cliffs, and scenic beauty.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#9962;</div>
+          <h4>Murud-Janjira Fort</h4>
+          <div class="distance">&#128205; 14 km (36 min drive)</div>
+          <p>A historic sea fort dating back to the 15th century. One of the most impressive marine fortresses in India.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#128722;</div>
+          <h4>Siddhivinayak Temple</h4>
+          <div class="distance">&#128205; 500 metres</div>
+          <p>A serene temple located nearby. Seek blessings before your beach day.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127860;</div>
+          <h4>Local Restaurants</h4>
+          <div class="distance">&#128205; 500 metres - 1 km</div>
+          <p>Enjoy fresh seafood and authentic Malvani cuisine at local restaurants and shacks near the beach.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127759;</div>
+          <h4>Murud Beach</h4>
+          <div class="distance">&#128205; 21 min drive</div>
+          <p>A serene black-sand beach with food shacks, a relaxed vibe, and boat access to the historic fort.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127963;</div>
+          <h4>Korlai Fort & Beach</h4>
+          <div class="distance">&#128205; 29 min drive</div>
+          <p>A historic Portuguese fort with a lighthouse offering panoramic views, located by a peaceful beach.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127917;</div>
+          <h4>Revdanda Fort</h4>
+          <div class="distance">&#128205; 30 min drive</div>
+          <p>An abandoned fort surrounded by lush jungle and black sand beach. Great for exploration and photography.</p>
+        </div>
+        <div class="nearby-card">
+          <div class="icon">&#127758;</div>
+          <h4>Phansad Wildlife Sanctuary</h4>
+          <div class="distance">&#128205; 45 min drive</div>
+          <p>A protected area with diverse flora and fauna. Ideal for nature walks, bird watching, and trekking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section direction-section fade-up">
+    <div class="container">
+      <div class="section-title">
+        <h2>How to Reach</h2>
+        <p>Getting to Parijat Villa is easy from major cities</p>
+      </div>
+      <div class="grid-3">
+        <div class="direction-card">
+          <h3>&#128646; From Mumbai</h3>
+          <p>Drive via Mumbai-Goa Highway (NH-66) towards Alibaug. Take the route via Pen, then continue towards Murud Janjira. The drive takes approximately 3-4 hours.</p>
+        </div>
+        <div class="direction-card">
+          <h3>&#128646; From Pune</h3>
+          <p>Take the Mumbai-Pune Expressway towards Panvel. Continue on NH-66 towards Alibaug and follow signs to Murud Janjira. Approximate drive time is 3.5-4.5 hours.</p>
+        </div>
+        <div class="direction-card">
+          <h3>&#128646; By Train</h3>
+          <p>The nearest railway station is Roha (40 km away). You can take a taxi or local bus from Roha to Nandgaon. Alternatively, you can take a train to Mumbai and drive down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid-4">
+        <div>
+          <h3>Parijat Villa</h3>
+          <p style="font-size: 0.9rem;">A peaceful beach homestay in Nandgaon, near Murud Janjira, Maharashtra. Your perfect weekend getaway on the Konkan coast.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="amenities.html">Amenities</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h3>Contact Info</h3>
+          <a href="#">Nandgaon, Murud Janjira</a>
+          <a href="#">Maharashtra 402401</a>
+          <a href="tel:+919224763985">+91 9224763985</a>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Stay connected for updates and offers.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/theparijathome?igsh=YTZvOTdycHh6ODE0" target="_blank">&#120157;</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Parijat Villa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
